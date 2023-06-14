@@ -98,20 +98,19 @@ ORDER BY [HireDate] DESC
 -- Problem 20
 UPDATE [Employees]
 SET [Salary] = [Salary] * 1.10
-WHERE [DepartmentID] IN (4, 12, 42, 46);
+WHERE [DepartmentID] IN (1, 2, 4, 11);
 
 SELECT Salary
 FROM Employees;
 
 UPDATE [Employees]
 SET [Salary] = [Salary] * 0.90 -- Decrease salaries by 10% (90% of the original value)
-WHERE [DepartmentID] IN (4, 12, 42, 46);
-
+WHERE [DepartmentID] IN  (1, 2, 4, 11);
 
 
 -- Problem 21
 INSERT INTO [Employees] ([FirstName], [LastName], [MiddleName], [JobTitle], [DepartmentID], [ManagerID], [HireDate], [Salary], [AddressID])
-VALUES ('John', 'Greham', 'L', 'Engineer', 1, 12, '2023-06-14 09:00:00', 85000, 150);
+VALUES ('John', 'Graham', 'L', 'Engineer', 1, 12, '2023-06-14 09:00:00', 85000, 150);
 
 SELECT * FROM [Employees]
 WHERE[FirstName] = 'John';
