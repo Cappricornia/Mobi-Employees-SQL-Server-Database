@@ -150,4 +150,5 @@ SELECT
       ,DATEDIFF(MONTH, [Birthdate] , GETDATE()) AS [Age in Months]
       ,DATEDIFF(DAY, [Birthdate] , GETDATE()) AS [Age in Day]
       ,DATEDIFF(MINUTE, [Birthdate] , GETDATE()) AS [Age in Minutes]
+      ,DATEDIFF(SECOND, [Birthdate] , GETDATE()) AS [Age in Seconds]
   FROM [Person]
