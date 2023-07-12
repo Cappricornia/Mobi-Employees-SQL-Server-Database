@@ -1,14 +1,14 @@
 -- Build-in functions SQL Server
 
 
--- Problem 1 - using wildcards
+-- Problem 1 - Using Wildcards
 SELECT
       [FirstName]
       ,[LastName]
   FROM [Employees]
   WHERE [FirstName] LIKE 'Ta%'
 
-  -- Problem 2 -- using wildcards
+  -- Problem 2 -- Using Wildcards
   SELECT
       [FirstName]
       ,[LastName]
@@ -31,27 +31,27 @@ SELECT
 
     -- Problem 5 - using LEN
 
-	SELECT 
-		[Name]
+  SELECT 
+       [Name]
   FROM [Towns]
-  WHERE LEN([Name]) IN  [6]
+  WHERE LEN([Name]) IN  [4, 6]
   ORDER BY [Name]
 
 
   -- Problem 6
   SELECT 
     [TownID]
-	,[Name]
+    ,[Name]
   FROM [Towns]
   WHERE NOT [Name] LIKE '[RBD]%'
   ORDER BY [Name] 
 
-  -- Problem 7 - create view
+  -- Problem 7 - create a view
 
   CREATE VIEW [V_EmployeesHiredAfter2002] AS
   SELECT
       [FirstName]
-	  ,[LastName]
+      ,[LastName]
   FROM [Employees]
   WHERE DATEPART(YEAR, [HireDate]) > 2002;
 
@@ -77,7 +77,7 @@ SELECT
 
   -- Problem 10 - DENSE RANK and CTE
 
-  WITH cte AS (
+  WITH CTE AS (
   SELECT
 	   *
 	  ,DENSE_RANK() OVER
@@ -88,7 +88,7 @@ SELECT
   SELECT
 	   [EmployeeID]
 	  ,[FirstName]
-      ,[LastName]
+          ,[LastName]
 	  ,[Salary]
 	  ,[Rank]
   FROM cte
@@ -97,8 +97,8 @@ SELECT
 
 -- Problem 11
 
--- Create the People table
-CREATE TABLE [Persons] (
+-- Create the Person table
+CREATE TABLE [Person] (
   [Id] INT IDENTITY(1,1) PRIMARY KEY,
   [FirstName] VARCHAR(100),
   [LastName] VARCHAR(100),
@@ -106,8 +106,8 @@ CREATE TABLE [Persons] (
 );
 
 -- Problem 12
--- Insert records into the Persons table
-INSERT INTO [Persons] ([FirstName], [LastName], [Birthdate])
+-- Insert records into the Person table
+INSERT INTO [Person] ([FirstName], [LastName], [Birthdate])
 VALUES
     ('John', 'Doe', '1990-01-01'),
     ('Jane', 'Smith', '1985-05-15'),
@@ -144,10 +144,10 @@ VALUES
 SELECT 
        [Id]
       ,[FirstName]
-	  ,[LastName]
+      ,[LastName]
       ,[Birthdate]
       ,DATEDIFF(YEAR, [Birthdate] , GETDATE()) AS [Age in Years]
       ,DATEDIFF(MONTH, [Birthdate] , GETDATE()) AS [Age in Months]
       ,DATEDIFF(DAY, [Birthdate] , GETDATE()) AS [Age in Day]
       ,DATEDIFF(MINUTE, [Birthdate] , GETDATE()) AS [Age in Minutes]
-  FROM [Persons]
+  FROM [Person]
