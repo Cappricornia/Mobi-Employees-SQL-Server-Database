@@ -4,3 +4,6 @@
 # ==========================================================================
 
 ![schema](https://github.com/Cappricornia/Mobi-Employees-SQL-Server-Database/assets/90700181/86eacfc1-6e7b-4372-8a4d-98cd51bb00b5)
+
+
+![13](https://github.com/Cappricornia/Mobi-Employees-SQL-Server-Database/assets/90700181/42085456-4fc3-43ab-b21e-4628df036347)
