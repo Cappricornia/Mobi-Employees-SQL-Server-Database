@@ -141,4 +141,14 @@ AS
 
 SELECT MIN(AvgSalary) FROM AvgSalCTE;
 
+-- Problem 15
+
+SELECT 
+	e.EmployeeID,
+	e.Salary,
+	d.[Name] AS [Department Name]
+FROM Employees AS e
+   LEFT OUTER JOIN Departments AS d 
+   ON e.DepartmentID = d.DepartmentID
+WHERE d.[Name]= 'Marketing' AND e.Salary < 30000
 
