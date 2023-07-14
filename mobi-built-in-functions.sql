@@ -1,4 +1,4 @@
--- Build-in functions SQL Server
+-- Built-in functions SQL Server
 
 
 -- Problem 1 - Using Wildcards
