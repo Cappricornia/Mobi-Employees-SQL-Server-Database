@@ -7,3 +7,5 @@
 ![252876611-42085456-4fc3-43ab-b21e-4628df036347](https://github.com/Cappricornia/Mobi-Employees-SQL-Server-Database/assets/90700181/45713501-94ce-406f-9e9c-77ea83474478)
 # ======================
 ![join](https://github.com/Cappricornia/Mobi-Employees-SQL-Server-Database/assets/90700181/0abd20dc-e555-403b-bf04-e92d6c499822)
+# ======================
+![trig](https://github.com/Cappricornia/Mobi-Employees-SQL-Server-Database/assets/90700181/90338e0f-607d-4f25-b1b1-602ad93352e6)
